@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AfriTech Elite – Talents Numériques d'Afrique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="logo">
+    <div class="logo-icon">🌍</div>
+    <div class="logo-text">
+      <span>AfriTech <span style="color:var(--orange)">Elite</span></span>
+      <span>Talents Numériques d'Afrique</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">À Propos</a></li>
+    <li><a href="#domaines">Nos Services</a></li>
+    <li><a href="#formations">Formations</a></li>
+    <li><a href="#membres">Membres</a></li>
+    <li><a href="#communaute">Communauté</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToForm()">Rejoindre →</button>
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">À Propos</a>
+  <a href="#domaines" onclick="closeMenu()">Nos Services</a>
+  <a href="#formations" onclick="closeMenu()">Formations</a>
+  <a href="#membres" onclick="closeMenu()">Membres</a>
+  <a href="#rejoindre" onclick="closeMenu()">Rejoindre</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="ring ring-3"></div>
+  <div class="ring ring-4"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>Plateforme active · Africa & Diaspora</span>
+    </div>
+    <h1 class="hero-title">
+      Bienvenue sur<br>
+      <span class="accent-orange">AfriTech</span>
+      <span class="accent-green"> Elite</span>
+    </h1>
+    <p class="hero-sub">
+      Votre outil au cœur du développement numérique de l'Afrique. 
+      Nous connectons les meilleurs talents tech du continent et de la diaspora africaine 
+      pour bâtir l'avenir digital de l'Afrique.
+    </p>
+    <div class="hero-actions">
+      <a href="#rejoindre" class="btn-primary">🚀 Rejoindre la plateforme</a>
+      <a href="#domaines" class="btn-secondary">🔍 Découvrir nos services</a>
+    </div>
+  </div>
+
+  <!-- Globe décoratif SVG -->
+  <div class="hero-globe">
+    <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cercles concentriques Olympique -->
+      <circle cx="210" cy="210" r="200" stroke="#F97316" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.25"/>
+      <circle cx="210" cy="210" r="155" stroke="#16A34A" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.3"/>
+      <circle cx="210" cy="210" r="110" stroke="#F59E0B" stroke-width="2" opacity="0.2"/>
+      <!-- Globe central -->
+      <circle cx="210" cy="210" r="72" fill="url(#globeGrad)" opacity="0.95"/>
+      <!-- Méridiens / Équateur -->
+      <ellipse cx="210" cy="210" rx="72" ry="35" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" fill="none"/>
+      <line x1="138" y1="210" x2="282" y2="210" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="210" y1="138" x2="210" y2="282" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <ellipse cx="210" cy="210" rx="36" ry="72" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+      <!-- Continent Afrique simplifié -->
+      <path d="M200 168 C196 172 192 180 193 190 C194 200 188 208 190 218 C192 228 198 236 205 240 C212 244 220 238 224 230 C228 222 226 212 222 204 C218 196 222 186 218 178 C214 170 204 164 200 168Z" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.8)" stroke-width="0.8"/>
+      <!-- Points de connexion orbitants -->
+      <circle cx="210" cy="55" r="7" fill="#F97316" opacity="0.9"/>
+      <circle cx="355" cy="210" r="6" fill="#16A34A" opacity="0.9"/>
+      <circle cx="210" cy="365" r="5" fill="#F59E0B" opacity="0.9"/>
+      <circle cx="65"  cy="210" r="7" fill="#F97316" opacity="0.9"/>
+      <circle cx="320" cy="100" r="5" fill="#16A34A" opacity="0.8"/>
+      <circle cx="100" cy="320" r="5" fill="#F59E0B" opacity="0.8"/>
+      <!-- Lignes de connexion -->
+      <line x1="210" y1="55" x2="210" y2="138" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.5"/>
+      <line x1="355" y1="210" x2="282" y2="210" stroke="#16A34A" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.5"/>
+      <line x1="65"  y1="210" x2="138" y2="210" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.5"/>
+      <line x1="320" y1="100" x2="258" y2="162" stroke="#16A34A" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+      <line x1="100" y1="320" x2="162" y2="258" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+      <defs>
+        <radialGradient id="globeGrad" cx="40%" cy="35%">
+          <stop offset="0%"  stop-color="#F97316"/>
+          <stop offset="60%" stop-color="#1A1A2E"/>
+          <stop offset="100%" stop-color="#0F172A"/>
+        </radialGradient>
+      </defs>
+    </svg>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="3500">0</div>
+      <div class="stat-label">📊 Membres & Participants attendus</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="54">0</div>
+      <div class="stat-label">🌍 Pays africains représentés</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="120">0</div>
+      <div class="stat-label">🎓 Formations disponibles</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="30">0</div>
+      <div class="stat-label">🤝 Partenaires stratégiques</div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAINES -->
+<section id="domaines">
+  <div class="section-header reveal">
+    <span class="section-eyebrow eyebrow-orange">Nos Services</span>
+    <h2 class="section-title">Domaines d'intervention</h2>
+    <p class="section-sub">AfriTech Elite couvre l'ensemble de l'écosystème numérique — du développement logiciel à l'intelligence artificielle, en passant par les infrastructures et le marketing digital.</p>
+  </div>
+  <div class="domaines-grid">
+    <div class="domaine-card reveal"><div class="domaine-icon icon-orange">💻</div><h3>Développement Web & Mobile</h3><p>Frontend, backend, applications natives iOS/Android, PWA et architectures modernes.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-green">🤖</div><h3>Intelligence Artificielle</h3><p>Machine Learning, Deep Learning, NLP, Computer Vision et IA générative.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-orange">☁️</div><h3>Cloud & DevOps</h3><p>AWS, Azure, GCP, Kubernetes, Docker, CI/CD et architectures microservices.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-green">🔐</div><h3>Cybersécurité</h3><p>Audit de sécurité, pentesting, cryptographie et protection des données.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-orange">📡</div><h3>Réseaux & Télécoms</h3><p>Infrastructure réseau, 5G, fibre optique, VoIP et systèmes embarqués.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-green">📊</div><h3>Data Science & Analytics</h3><p>Big Data, Business Intelligence, visualisation de données et data engineering.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-orange">⛓️</div><h3>Blockchain & Web3</h3><p>Smart contracts, DeFi, NFT, crypto-monnaies et applications décentralisées.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-green">🎨</div><h3>Design UX/UI</h3><p>Expérience utilisateur, interfaces intuitives, prototypage et design system.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-orange">📱</div><h3>Marketing Digital</h3><p>SEO/SEA, social media, e-commerce, growth hacking et stratégie de contenu.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-green">🏗️</div><h3>Architecture Logicielle</h3><p>Conception de systèmes, patterns architecturaux et ingénierie logicielle avancée.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-orange">🎮</div><h3>Développement de Jeux</h3><p>Game design, Unity, Unreal Engine et expériences immersives AR/VR.</p></div>
+    <div class="domaine-card reveal"><div class="domaine-icon icon-green">🚀</div><h3>Tech Entrepreneuriat</h3><p>Startups tech, fintech africaine, agritech, healthtech et innovation digitale.</p></div>
+  </div>
+</section>
+
+<!-- MEMBRES -->
+<section id="membres">
+  <div class="section-header reveal">
+    <span class="section-eyebrow eyebrow-green">Notre Équipe</span>
+    <h2 class="section-title">Les talents AfriTech Elite</h2>
+    <p class="section-sub">Des experts, mentors et professionnels engagés à bâtir l'avenir numérique du continent africain.</p>
+  </div>
+  <div class="membres-tabs">
+    <button class="tab-btn active" onclick="filterMembres('all', this)">Tous</button>
+    <button class="tab-btn" onclick="filterMembres('expert', this)">🏆 Experts</button>
+    <button class="tab-btn" onclick="filterMembres('mentor', this)">🎓 Mentors</button>
+    <button class="tab-btn" onclick="filterMembres('tech', this)">⚙️ Équipe Tech</button>
+    <button class="tab-btn" onclick="filterMembres('comm', this)">📢 Communication</button>
+    <button class="tab-btn" onclick="filterMembres('partenaire', this)">🤝 Partenaires</button>
+  </div>
+  <div class="membres-grid" id="membresGrid">
+    <!-- Générés dynamiquement -->
+  </div>
+</section>
+
+<!-- FORMATIONS -->
+<section id="formations">
+  <div class="formations-arc"></div>
+  <div class="section-header center reveal" style="position:relative;">
+    <span class="section-eyebrow" style="color:var(--orange)">Formations</span>
+    <h2 class="section-title" style="color:white">Montez en compétences</h2>
+    <p class="section-sub" style="color:#94A3B8;margin:0 auto;">Des programmes de formation intensifs animés par des experts du terrain, accessibles depuis toute l'Afrique et la diaspora.</p>
+  </div>
+  <div class="formations-grid">
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-orange">Développement</span>
+      <h3>Bootcamp Full Stack JavaScript</h3>
+      <p>React, Node.js, bases de données, déploiement cloud. De zéro à développeur professionnel.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 12 semaines</span>
+        <span class="meta-item">📶 En ligne</span>
+        <span class="meta-item">🏆 Certifié</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-green">Intelligence Artificielle</span>
+      <h3>Data Science & Machine Learning</h3>
+      <p>Python, TensorFlow, Scikit-learn, projets réels sur des données africaines.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 16 semaines</span>
+        <span class="meta-item">📶 Hybride</span>
+        <span class="meta-item">🏆 Certifié</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-gold">Cloud</span>
+      <h3>DevOps & Cloud Engineering</h3>
+      <p>AWS, Docker, Kubernetes, pipelines CI/CD et infrastructure as code.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 10 semaines</span>
+        <span class="meta-item">📶 En ligne</span>
+        <span class="meta-item">🏆 AWS Cert</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-orange">Mobile</span>
+      <h3>Développement Mobile Flutter</h3>
+      <p>Créez des applications iOS et Android avec Flutter et Dart, publiez sur les stores.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 8 semaines</span>
+        <span class="meta-item">📶 En ligne</span>
+        <span class="meta-item">📱 Pratique</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-green">Cybersécurité</span>
+      <h3>Ethical Hacking & Sécurité</h3>
+      <p>Pentesting, analyse de vulnérabilités, forensic numérique et conformité RGPD.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 14 semaines</span>
+        <span class="meta-item">📶 Hybride</span>
+        <span class="meta-item">🔐 CEH Prep</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-gold">Marketing</span>
+      <h3>Marketing Digital & Growth</h3>
+      <p>SEO, publicité digitale, réseaux sociaux, emailing et analytics pour les marchés africains.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 6 semaines</span>
+        <span class="meta-item">📶 En ligne</span>
+        <span class="meta-item">📊 Analytics</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-orange">UX/UI</span>
+      <h3>Design d'Interfaces & UX</h3>
+      <p>Figma, design thinking, prototypage, tests utilisateurs et design system.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 8 semaines</span>
+        <span class="meta-item">📶 En ligne</span>
+        <span class="meta-item">🎨 Portfolio</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-green">Blockchain</span>
+      <h3>Web3 & Blockchain Africaine</h3>
+      <p>Solidity, smart contracts, DeFi appliquée à la finance africaine et aux paiements mobiles.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 10 semaines</span>
+        <span class="meta-item">📶 En ligne</span>
+        <span class="meta-item">⛓️ Projets réels</span>
+      </div>
+    </div>
+    <div class="formation-card reveal">
+      <span class="formation-tag tag-gold">Entrepreneuriat</span>
+      <h3>Lancer sa Startup Tech en Afrique</h3>
+      <p>Business model, levée de fonds, product-market fit, pitch deck et scaling en Afrique.</p>
+      <div class="formation-meta">
+        <span class="meta-item">⏱ 6 semaines</span>
+        <span class="meta-item">📶 Présentiel</span>
+        <span class="meta-item">🚀 Incubation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIONS -->
+<section id="missions">
+  <div class="missions-layout">
+    <div class="missions-visual reveal">
+      <div class="mission-rings-wrap">
+        <div class="m-ring"></div>
+        <div class="m-ring"></div>
+        <div class="m-ring"></div>
+        <div class="m-center">🌍</div>
+        <!-- Dots orbitants -->
+        <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px rgba(249,115,22,0.6)"></div>
+        <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(22,163,74,0.6)"></div>
+        <div style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(245,158,11,0.6)"></div>
+        <div style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 8px rgba(249,115,22,0.6)"></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="section-eyebrow eyebrow-orange">Nos Missions</span>
+      <h2 class="section-title">Construire l'Afrique numérique de demain</h2>
+      <p class="section-sub" style="margin-bottom:36px;">AfriTech Elite s'engage à apporter une offre numérique diversifiée et accessible à l'ensemble du continent africain, en valorisant ses talents locaux et sa diaspora.</p>
+      <ul class="mission-list">
+        <li class="mission-item">
+          <div class="mission-icon mi-orange">🎯</div>
+          <div><h4>Valoriser les talents africains</h4><p>Identifier, former et propulser les meilleurs profils tech du continent sur la scène internationale.</p></div>
+        </li>
+        <li class="mission-item">
+          <div class="mission-icon mi-green">🔗</div>
+          <div><h4>Connecter la diaspora au continent</h4><p>Créer des ponts durables entre les experts africains de la diaspora et les entreprises locales.</p></div>
+        </li>
+        <li class="mission-item">
+          <div class="mission-icon mi-orange">📚</div>
+          <div><h4>Démocratiser l'accès aux formations</h4><p>Proposer des formations de qualité internationale à des tarifs adaptés aux réalités africaines.</p></div>
+        </li>
+        <li class="mission-item">
+          <div class="mission-icon mi-green">🏗️</div>
+          <div><h4>Bâtir l'infrastructure numérique</h4><p>Contribuer activement à la transformation digitale des entreprises, gouvernements et institutions africaines.</p></div>
+        </li>
+        <li class="mission-item">
+          <div class="mission-icon mi-orange">🌱</div>
+          <div><h4>Stimuler l'innovation locale</h4><p>Soutenir les startups tech africaines, de l'idée à la levée de fonds internationale.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNAUTÉ -->
+<section id="communaute">
+  <div class="comm-grid">
+    <div class="reveal">
+      <span class="section-eyebrow eyebrow-green">Communauté</span>
+      <h2 class="section-title">Une communauté qui rassemble</h2>
+      <p class="section-sub" style="margin-bottom:40px;">Chaque jour, notre réseau s'agrandit. Des professionnels du Sénégal à la Silicon Valley, du Maroc à Montréal — AfriTech Elite c'est la famille tech africaine mondiale.</p>
+      <div class="progress-list">
+        <div class="progress-item">
+          <label><span>Développeurs & Ingénieurs</span><span style="color:var(--orange)">42%</span></label>
+          <div class="progress-bar"><div class="progress-fill fill-orange" style="width:42%"></div></div>
+        </div>
+        <div class="progress-item">
+          <label><span>Data Scientists & IA</span><span style="color:var(--green)">18%</span></label>
+          <div class="progress-bar"><div class="progress-fill fill-green" style="width:18%"></div></div>
+        </div>
+        <div class="progress-item">
+          <label><span>Entrepreneurs & Startups</span><span style="color:var(--orange)">22%</span></label>
+          <div class="progress-bar"><div class="progress-fill fill-orange" style="width:22%"></div></div>
+        </div>
+        <div class="progress-item">
+          <label><span>Marketing & Communication</span><span style="color:var(--green)">12%</span></label>
+          <div class="progress-bar"><div class="progress-fill fill-green" style="width:12%"></div></div>
+        </div>
+        <div class="progress-item">
+          <label><span>Design & Créatifs</span><span style="color:var(--orange)">6%</span></label>
+          <div class="progress-bar"><div class="progress-fill fill-orange" style="width:6%"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="comm-numbers reveal">
+      <div class="comm-box"><span class="comm-num orange">3,500+</span><p>Membres & participants attendus</p></div>
+      <div class="comm-box"><span class="comm-num green">54</span><p>Pays africains représentés</p></div>
+      <div class="comm-box"><span class="comm-num orange">20+</span><p>Pays de la diaspora</p></div>
+      <div class="comm-box"><span class="comm-num green">120+</span><p>Formations au programme</p></div>
+      <div class="comm-box" style="grid-column:span 2;"><span class="comm-num orange">∞</span><p>Opportunités de carrière & projets collaboratifs</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-card">
+        <span class="about-tag">Notre Vision</span>
+        <h3>L'Afrique mérite sa révolution numérique</h3>
+        <p>Nous croyons fermement que l'Afrique possède tous les talents nécessaires pour mener sa propre révolution numérique. AfriTech Elite est né de cette conviction : rassembler, former, connecter et propulser les meilleurs esprits tech du continent.</p>
+        <br/>
+        <p>Que vous soyez développeur à Dakar, data scientist à Nairobi, entrepreneur à Lagos ou ingénieur cloud à Paris — AfriTech Elite est votre maison.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="section-eyebrow eyebrow-orange">À Propos de Nous</span>
+      <h2 class="section-title">Qui sommes-nous ?</h2>
+      <p class="section-sub" style="margin-bottom:28px;">AfriTech Elite est une plateforme panafricaine dédiée aux talents numériques, fondée pour combler le fossé entre les compétences tech africaines et les opportunités mondiales.</p>
+      <p style="color:var(--gray);font-size:0.9rem;line-height:1.8;margin-bottom:28px;">Notre équipe pluridisciplinaire regroupe des experts du continent et de la diaspora, animés par une même passion : faire de l'Afrique un acteur incontournable de l'économie numérique mondiale. Nous travaillons en partenariat avec des entreprises tech, des universités, des incubateurs et des gouvernements pour créer un écosystème numérique africain solide et souverain.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:130px;padding:20px;background:var(--orange-light);border-radius:16px;text-align:center;">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--orange);font-family:'Space Grotesk',sans-serif;">2024</div>
+          <div style="font-size:0.8rem;color:var(--gray);">Fondée en</div>
+        </div>
+        <div style="flex:1;min-width:130px;padding:20px;background:var(--green-light);border-radius:16px;text-align:center;">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">Pan-🌍</div>
+          <div style="font-size:0.8rem;color:var(--gray);">Présence continentale</div>
+        </div>
+        <div style="flex:1;min-width:130px;padding:20px;background:var(--orange-light);border-radius:16px;text-align:center;">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--orange);font-family:'Space Grotesk',sans-serif;">100%</div>
+          <div style="font-size:0.8rem;color:var(--gray);">Africain & Diaspora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<section id="partenaires" style="background:var(--gray-light);">
+  <div class="section-header center reveal">
+    <span class="section-eyebrow eyebrow-green">Partenaires</span>
+    <h2 class="section-title">Ils nous font confiance</h2>
+    <p class="section-sub">AfriTech Elite s'appuie sur un réseau de partenaires stratégiques pour offrir les meilleures opportunités à nos membres.</p>
+  </div>
+  <div class="partenaires-strip reveal">
+    <div class="partenaire-badge">🏦 African Development Bank</div>
+    <div class="partenaire-badge">🌐 African Union Digital</div>
+    <div class="partenaire-badge">☁️ AWS Africa</div>
+    <div class="partenaire-badge">🔵 Microsoft for Africa</div>
+    <div class="partenaire-badge">🟡 Google Africa</div>
+    <div class="partenaire-badge">📱 MTN Group Tech</div>
+    <div class="partenaire-badge">🏢 Orange Digital Center</div>
+    <div class="partenaire-badge">🎓 African Union University</div>
+    <div class="partenaire-badge">💡 Seedstars Africa</div>
+    <div class="partenaire-badge">🚀 Partech Africa</div>
+  </div>
+</section>
+
+<!-- FORMULAIRE REJOINDRE -->
+<section id="rejoindre">
+  <div class="form-arc"></div>
+  <div class="form-layout">
+    <div class="form-pitch reveal">
+      <span class="section-eyebrow" style="color:var(--orange)">Rejoindre AfriTech Elite</span>
+      <h2 class="section-title" style="color:white;">Faites partie de<br><span style="color:var(--orange)">l'élite</span> numérique<br><span style="color:var(--green)">africaine</span></h2>
+      <p class="section-sub" style="color:#94A3B8;margin-bottom:36px;">Rejoignez plus de 3 500 talents tech africains et de la diaspora sur la plateforme de référence du numérique africain.</p>
+      <div class="why-list">
+        <div class="why-item"><div class="why-check">✓</div><p><strong style="color:white;">Accès aux formations</strong> — Formations certifiantes à tarifs préférentiels membres</p></div>
+        <div class="why-item"><div class="why-check">✓</div><p><strong style="color:white;">Réseau panafricain</strong> — Connectez-vous avec 3 500+ professionnels tech</p></div>
+        <div class="why-item"><div class="why-check">✓</div><p><strong style="color:white;">Opportunités exclusives</strong> — Offres d'emploi, projets et partenariats</p></div>
+        <div class="why-item"><div class="why-check">✓</div><p><strong style="color:white;">Mentoring personnalisé</strong> — Accompagnement par des experts du secteur</p></div>
+        <div class="why-item"><div class="why-check">✓</div><p><strong style="color:white;">Visibilité internationale</strong> — Votre profil promu auprès de nos partenaires</p></div>
+      </div>
+    </div>
+
+    <div class="form-box reveal" id="formBox">
+      <h3 style="color:white;margin-bottom:24px;font-size:1.2rem;font-family:'Space Grotesk',sans-serif;">Créer mon profil membre</h3>
+      <div id="formContent">
+        <div class="form-row">
+          <div class="form-group"><label>NOM *</label><input type="text" id="fNom" placeholder="Votre nom de famille"/></div>
+          <div class="form-group"><label>PRÉNOMS *</label><input type="text" id="fPrenom" placeholder="Vos prénoms"/></div>
+        </div>
+        <div class="form-group"><label>PROFIL ACTUEL *</label>
+          <select id="fProfil">
+            <option value="">— Sélectionnez votre profil —</option>
+            <option>Développeur Web / Mobile</option>
+            <option>Ingénieur Cloud / DevOps</option>
+            <option>Data Scientist / ML Engineer</option>
+            <option>Expert Cybersécurité</option>
+            <option>Designer UX/UI</option>
+            <option>Ingénieur Réseaux & Télécoms</option>
+            <option>Expert Blockchain / Web3</option>
+            <option>Chef de Projet IT</option>
+            <option>Marketing Digital</option>
+            <option>Entrepreneur / Fondateur de Startup</option>
+            <option>Étudiant en informatique</option>
+            <option>Consultant IT</option>
+            <option>Autre profil tech</option>
+          </select>
+        </div>
+        <div class="form-group"><label>DOMAINE CHOISI *</label>
+          <select id="fDomaine">
+            <option value="">— Votre domaine d'intérêt principal —</option>
+            <option>Développement Web & Mobile</option>
+            <option>Intelligence Artificielle & Data Science</option>
+            <option>Cloud Computing & DevOps</option>
+            <option>Cybersécurité</option>
+            <option>Réseaux & Télécommunications</option>
+            <option>Blockchain & Web3</option>
+            <option>Design UX/UI</option>
+            <option>Marketing Digital</option>
+            <option>Entrepreneuriat Tech</option>
+            <option>Jeux Vidéo & Réalité Virtuelle</option>
+            <option>Architecture Logicielle</option>
+          </select>
+        </div>
+        <div class="form-group"><label>PAYS *</label>
+          <select id="fPays">
+            <option value="">— Sélectionnez votre pays —</option>
+            <optgroup label="🌍 Afrique du Nord">
+              <option>Algérie</option><option>Égypte</option><option>Libye</option><option>Maroc</option><option>Mauritanie</option><option>Soudan</option><option>Tunisie</option>
+            </optgroup>
+            <optgroup label="🌍 Afrique de l'Ouest">
+              <option>Bénin</option><option>Burkina Faso</option><option>Cap-Vert</option><option>Côte d'Ivoire</option><option>Gambie</option><option>Ghana</option><option>Guinée</option><option>Guinée-Bissau</option><option>Guinée équatoriale</option><option>Liberia</option><option>Mali</option><option>Niger</option><option>Nigeria</option><option>Sénégal</option><option>Sierra Leone</option><option>Togo</option>
+            </optgroup>
+            <optgroup label="🌍 Afrique Centrale">
+              <option>Angola</option><option>Cameroun</option><option>Congo</option><option>Gabon</option><option>RD Congo</option><option>République Centrafricaine</option><option>Rwanda</option><option>São Tomé-et-Príncipe</option><option>Tchad</option>
+            </optgroup>
+            <optgroup label="🌍 Afrique de l'Est">
+              <option>Burundi</option><option>Comores</option><option>Djibouti</option><option>Érythrée</option><option>Éthiopie</option><option>Kenya</option><option>Madagascar</option><option>Malawi</option><option>Maurice</option><option>Mozambique</option><option>Ouganda</option><option>Seychelles</option><option>Somalie</option><option>Soudan du Sud</option><option>Tanzanie</option><option>Zambie</option><option>Zimbabwe</option>
+            </optgroup>
+            <optgroup label="🌍 Afrique Australe">
+              <option>Afrique du Sud</option><option>Botswana</option><option>Eswatini</option><option>Lesotho</option><option>Namibie</option>
+            </optgroup>
+            <optgroup label="✈️ Diaspora Africaine">
+              <option>France</option><option>Canada</option><option>États-Unis</option><option>Belgique</option><option>Suisse</option><option>Allemagne</option><option>Italie</option><option>Espagne</option><option>Grande-Bretagne</option><option>Suède</option><option>Turquie</option><option>Russie</option><option>Chine</option><option>Dubaï (EAU)</option><option>Japon</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group"><label>ADRESSE EMAIL *</label><input type="email" id="fEmail" placeholder="votre@email.com"/></div>
+        <button class="form-submit" onclick="submitForm()">🚀 Rejoindre AfriTech Elite</button>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="check-big">✅</div>
+        <h3>Bienvenue dans la famille !</h3>
+        <p>Votre demande d'adhésion a été enregistrée. Vous recevrez un email de confirmation sous 24h. <br><br>🌍 Ensemble, nous bâtissons l'Afrique numérique de demain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div class="logo-icon" style="width:40px;height:40px;font-size:20px;">🌍</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:white;">AfriTech <span style="color:var(--orange)">Elite</span></div>
+      </div>
+      <p>La plateforme de référence des talents numériques africains. Connecter, Former, Propulser l'Afrique digitale.</p>
+      <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+        <span style="background:rgba(249,115,22,0.2);color:var(--orange);padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">🌍 Panafricain</span>
+        <span style="background:rgba(22,163,74,0.2);color:#4ADE80;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">🚀 +3 500 membres</span>
+        <span style="background:rgba(245,158,11,0.2);color:var(--gold);padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">✅ 100% Africain</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="#about">À propos de nous</a></li>
+        <li><a href="#domaines">Nos services</a></li>
+        <li><a href="#formations">Nos formations</a></li>
+        <li><a href="#membres">Nos membres</a></li>
+        <li><a href="#rejoindre">Rejoindre</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#domaines">Développement Web</a></li>
+        <li><a href="#domaines">Intelligence Artificielle</a></li>
+        <li><a href="#domaines">Cloud & DevOps</a></li>
+        <li><a href="#domaines">Cybersécurité</a></li>
+        <li><a href="#domaines">Marketing Digital</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="#">📧 contact@afritech-elite.com</a></li>
+        <li><a href="#">💼 LinkedIn AfriTech Elite</a></li>
+        <li><a href="#">🐦 Twitter @AfriTechElite</a></li>
+        <li><a href="#">📱 WhatsApp Community</a></li>
+        <li><a href="#">📍 Dakar • Lagos • Nairobi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 AfriTech Elite · Tous droits réservés · Fait avec ❤️ pour l'Afrique · <a href="https://sonel10.github.io/afritech-elite/admin.html" style="color:var(--orange);text-decoration:none;font-size:0.75rem">🔐 Admin</a> · <a href="https://sonel10.github.io/afritech-elite/admin.html" style="color:var(--orange);text-decoration:none;font-size:0.75rem">🔐 Admin</a></p>
+    <div class="social-links">
+      <a href="#" class="social-btn">in</a>
+      <a href="#" class="social-btn">𝕏</a>
+      <a href="#" class="social-btn">▶</a>
+      <a href="#" class="social-btn">📘</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✅ Bienvenue dans AfriTech Elite !</div>
+
+<script src="main.js"></script>
+</body>
+</html>
